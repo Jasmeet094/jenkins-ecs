@@ -148,7 +148,7 @@ module "efs" {
 
 resource "aws_route53_record" "jenkins_dns" {
   zone_id  = data.aws_route53_zone.selected.id
-  name     = "jenkins-mig.tronixtrm.com"
+  name     = "jenkins-server.com"
   type     = "A"
   alias {
     name                   = module.alb.alb_dns_name
